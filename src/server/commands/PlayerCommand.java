@@ -737,9 +737,13 @@ public class PlayerCommand {
             if (c.getPlayer().isInBlockedMap() || c.getPlayer().hasBlockedInventory()) {
                 c.getPlayer().dropMessage(5, "You may not use this command here.");
                 return 0;
-            }
+            }else if (c.getPlayer().getLevel() < 30) {
+                c.getPlayer().dropMessage(5, "You need to be at least lvl 30 in order to advance.");
+                return 0;
+            } else {
             NPCScriptManager.getInstance().start(c, 2300001, null);
             return 1;
+            }
         }
     }
 

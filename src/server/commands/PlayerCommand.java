@@ -147,8 +147,6 @@ public class PlayerCommand {
      return 1;
      }
      }
-
-     
      
      public static class ResetExp extends CommandExecute {
 
@@ -705,10 +703,10 @@ public class PlayerCommand {
             //sb.append("\r\n@mob < Information on the closest monster >");
             sb.append("\r\n@check < Displays various information; also use if you are stuck or unable to talk to NPC >");
             //sb.append("\r\n@npc < Universal NPC >");
-            sb.append("\r\n@callgm < Send a message to all online GameMasters. >");
-            sb.append("\r\n@job < Job advance at level 30+. >");
+            sb.append("\r\n@callgm < Send a message to all online GameMasters.");
             sb.append("\r\n@home < Warp to Acernis base >");
             sb.append("\r\n@fm < Warp to the FreeMarket instantly. >");
+            sb.append("\r\n@job < Job advancements! >");
             sb.append("\r\n@save < Fixes your experience and saves your character >");
             /*sb.append("\r\n@joinevent < Join ongoing event >");
              sb.append("\r\n@crescent < Universal Town Warp / Event NPC>");
@@ -739,13 +737,9 @@ public class PlayerCommand {
             if (c.getPlayer().isInBlockedMap() || c.getPlayer().hasBlockedInventory()) {
                 c.getPlayer().dropMessage(5, "You may not use this command here.");
                 return 0;
-            } else if (c.getPlayer().getLevel() < 30) {
-                c.getPlayer().dropMessage(5, "You need to be at least lvl 30 in order to advance.");
-                return 0;
-            } else {
-               NPCScriptManager.getInstance().start(c, 2300001, null);
-            return 1;
             }
+            NPCScriptManager.getInstance().start(c, 2300001, null);
+            return 1;
         }
     }
 

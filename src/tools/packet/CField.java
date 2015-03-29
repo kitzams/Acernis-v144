@@ -1127,7 +1127,7 @@ public class CField {
         mplew.writeInt(0);
         mplew.writeInt(0);
         mplew.writeInt(chr.getItemEffect());
-        mplew.writeInt(chr.getDamageSkin());//Prueba
+        //mplew.writeInt(chr.getDamageSkin()); // this aint working yet brah
         mplew.writeInt(GameConstants.getInventoryType(chr.getChair()) == MapleInventoryType.SETUP ? chr.getChair() : 0);
         mplew.writeInt(0);
         mplew.writeInt(0); //new v143

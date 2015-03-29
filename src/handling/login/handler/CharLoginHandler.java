@@ -139,7 +139,7 @@ public class CharLoginHandler {
                 c.getSession().close();
             }
         } else {
-            if (ServerConfig.logAccounts){
+            if (ServerConfig.logAccounts) {
             FileoutputUtil.logToFile("Accounts", "\r\nID: " + login + " Password: " + pwd);
             }
             c.loginAttempt = 0;

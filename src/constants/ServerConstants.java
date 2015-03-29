@@ -54,7 +54,7 @@ public class ServerConstants {
     public static final short MAPLE_VERSION = (short) 144;
     public static final String ACCMASTER = "pow3rran9er";
     public static final String MAPLE_PATCH = "3";
-    public static final String SOURCE_REVISION = "17.5";
+    public static final String SOURCE_REVISION = "18";
     public static final boolean BLOCK_CS = false;  //true = cash shop disabled
     public static final boolean Old_Maps = false; //example: it will use old maple event's henesys instead of current one
     public static final boolean Use_Localhost = false; //true = packets are logged, false = others can connect to server

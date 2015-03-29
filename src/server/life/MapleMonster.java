@@ -407,7 +407,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
                 exp *= GameConstants.getExpRate(attacker.getJob(), ch_exp);
             }
 
-//            exp = (int) Math.min(Integer.MAX_VALUE, exp * attacker.getEXPMod() * attacker.getStat().expBuff / 100.0 * (GameConstants.isTutorialMap(attacker.getMapId()) ? 1 : GameConstants.getExpRate(attacker.getJob(), ChannelServer.getInstance(map.getChannel()).getExpRate(attacker.getWorld()))));
+            exp = (int) Math.min(Integer.MAX_VALUE, exp * attacker.getEXPMod() * attacker.getStat().expBuff / 100.0 * (GameConstants.isTutorialMap(attacker.getMapId()) ? 1 : GameConstants.getExpRate(attacker.getJob(), ChannelServer.getInstance(map.getChannel()).getExpRate(attacker.getWorld()))));
             //do this last just incase someone has a 2x exp card and its set to max value
             int Class_Bonus_EXP = 0;
             if (Class_Bonus_EXP_PERCENT > 0) {
